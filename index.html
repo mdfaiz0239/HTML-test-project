@@ -8,9 +8,9 @@
             <h1>Backtracking</h1>
             <p>Copyright ©2002 by David Matuszek</p>
             <p>Backtracking is a form of recursion.</p>
-            <p>The usual <em>scenario</em> is that you are faced with a number of <i>options</i>, and you must choose one of these. After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.</p>
+            <p>The usual scenario is that you are faced with a number of option, and you must choose one of these. After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.</p>
             <p>Conceptually, you start at the root of a tree; the tree probably has some good leaves and some bad leaves, though it may be that the leaves are all good or all bad. You want to get to a good leaf. At each node, beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
-           <p>Suppose you get to a bad leaf. You can <ins>backtrack</ins> to continue the search for a good  leaf by revoking your most recent choice, and </strike> trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
+           <p>Suppose you get to a bad leaf. You can backtrack to continue the search for a good  leaf by revoking your most recent choice, and </strike> trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
            <p>This needs an example.</p>
           <center><img src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/treesearch.gif"></center> 
            
@@ -104,7 +104,7 @@
      <li>If the tree consists of a single leaf, test whether it is a goal node,</li>
      <li>Otherwise, search the subtrees until you find one containing a goal node, or until you have searched them all unsuccessfully.</li>
  </ol>
- //
+ 
  
  <h3>Non-recursive backtracking, using a stack</h3> 
 <p>Backtracking is a rather typical recursive algorithm, and any recursive
@@ -129,7 +129,7 @@
    </pre>
 
  
- //
+ 
 
 
 
@@ -207,7 +207,7 @@
 
 
                 
-                //
+                
 
 
 
@@ -278,7 +278,7 @@
                     }</b>
                 </pre> 
 
-                //
+                
                <p>Here's what the numbered lines are doing:</p> 
 
                
@@ -287,7 +287,7 @@
                 
                 
                
-                //
+                
                 
                 <ol>
                   <li> If we are given a null node, it's not solvable. This statement is so that we can call this method with the children of a
@@ -314,7 +314,7 @@
                             }
                         </b>
                     </pre>
-                    //
+                    
 
                    <p>I think the first version is simpler, but the second version is slightly more efficient.</p> 
 
@@ -325,13 +325,13 @@
                     you can ignore all the previous choices. Previous choices don't give you any information about what you should do next; 
                     as far as you know, both the left and the right child are possible solutions. In many problems, however, you may be able to eliminate
                      children immediately, without recursion.</p>
-                    //
+                    
                    <p> Consider, for example, the problem of four-coloring a map. It is a theorem of mathematics that any map on a plane, no matter how 
                     convoluted the countries are, can be colored with at most four colors, so that no two countries that share a border are the same color.</p>
-                    //
+                    
                     <p>To color a map, you choose a color for the first country, then a color for the second country, and so on, until all countries are colored. 
                         There are two ways to do this:</p>
-                    //
+                    
                     <ul>
                         <li>Method 1. Try each of the four possible colors, and recur. When you run out of countries, check whether you are at a goal node.</li>
                         <li>Method 2. Try only those colors that have not already been used for an adjacent country, and recur. If and when you run out of countries, 
@@ -414,13 +414,13 @@
 
                    </table></center>
                     
-                    //
+                    
                    <p>The zeros in the above table indicate times too short to measure (less than 1 millisecond).
                     Why this huge difference? Either of these methods could have exponential growth. Eliminating a node automatically eliminates all of
                      its descendents, and this will often prevent exponential growth. Conversely, by waiting to check until a leaf node is reached,
                       exponential growth is practically guaranteed. If there is any way to eliminate children (reduce the set of choices), do so!
 </p> 
-              //
+              
                 <h3>Debugging techniques</h3> 
                     
                    <p></p> Often our first try at a program doesn't work, and we need to debug it.
@@ -428,17 +428,17 @@
                     There are some simple tricks to making effective use of print statements. These tricks can be applied to any program, but are especially
                      useful when you are trying to debug recursive routines.
                    </p> 
-                   //
+                   
                     <p><strong>Trick #1: Indent when you print method entries and exits.</strong>strong Often, the best debugging technique is to print every method call
                         and return (or at least the most important ones). You probably want to print, for each method, what parameters it came in with,
                          and what value it leaves with. However, if you just print a long list of these, it's hard to match up method exits with their corresponding 
                          entries. Indenting to show the level of nesting can help.</p>
                     
-                    //
+                    
                     <p><strong>Trick #2: Use specialized print methods for debugging.</strong> Don't clutter up your actual code more than you must.
                         Also, remember that code inserted for debugging purposes can itself contain bugs, or (in the worst case) can affect the results,
                          so be very careful with it.</p>
-                    //
+                    
                    <p> Here's our debugging code. For this trivial program, there's almost more debugging code than actual
                         code, but in larger programs the proportions will be better.</p>
                     
@@ -515,12 +515,12 @@
                     </pre>
                    
                     
-                    //
+                    
         <p> <Strong>Trick #3: Never discard your debugging statements.</Strong> Writing debugging statements is programming, too.
             Often it's as much work to debug the debugging statements as it is to debug the actual program. Once your program is working,
              why throw this code away?</p>
                    
-//
+
 <p>Obviously, you don't want to print out all this debugging information from a program you are ready to submit
     (or to turn over to your manager). You could comment out your debugging calls, but that can be a lot of work. What's more,
      in the above example, you would have to replace every return(yes(node)) with return(true), and every return(no(node)) with return false.
@@ -561,7 +561,7 @@ static boolean no(BinaryTree node) {
 <p>In industry, actual programs often have multiple flags to control different aspects of debugging.
     Don't worry too much about making your code larger; modern compilers will notice that since the variable debugging is final, it can never be true, and the 
     controlled code will be discarded.</p>
-//
+
 <p><strong>Trick #4: Create an Exception.</strong> If an Exception is thrown, you can get information about just where it happened by sending it the message
     printStackTrace(PrintStream). Since an Exception is an object like any other, you can create and throw your own Exceptions. However, Java programmers don't always
      realize that you can create an Exception without throwing it. For example, the following code</p>
@@ -575,7 +575,7 @@ static boolean no(BinaryTree node) {
     at TreeSearch.main(TreeSearch.java:72)
     at __SHELL38.run(__SHELL38.java:16)
     at bluej.runtime.ExecServer.suspendExecution(Unknown Source)</strong></pre>
-    //
+    
        
 <h3>Example: Cindy's Puzzle</h3>
 <p>I call the following puzzle "Cindy's puzzle" for historical reasons. You have some number n of black marbles and the same number of white marbles, 
@@ -781,14 +781,14 @@ static boolean no(BinaryTree node) {
         </table>
          </center>
 
-         //
+         
          <p>Now to the program. The main program will initialize the board, and call a recursive backtracking routine to attempt to solve 
             the puzzle. The backtracking routine will either succeed and print out a winning path, or it will fail, and the main program will
              have to print out the bad news.</p>
 
          <p> we shall need to check whether we are at a leaf, which in this case means
             a position from which no further moves are possible. This isn't so easy.
-           The backtracking method is named solvable and returns a boolean. In solvable</p>
+           The backtracking method is named <b>solvable</b> and returns a <b>boolean</b>. In solvable</p>
         <p> Each possible move will result in a new board position, and these new board positions are the children of the current board position.
             Hence to find the children of a node (that is, of a board position), we need only find the possible moves from that node. Remember that it 
             is also highly desirable to find an ordering on these possible moves.
@@ -819,7 +819,7 @@ static boolean no(BinaryTree node) {
         </li>
         <li>If the position contains a white marble, the method checks for a move or jump to the left.</li>
   </ul>
-         //
+         
          <p>We write another method int[] makeMove(int[] oldBoard, int position) that will take a board and a position, make a
             move from that position, and return as its value a new board. (We could write this somewhat more efficiently by changing the old board,
              rather than creating a new one, but here we are more concerned with simplicity.) In technical jargon, makeMove is "applicative" rather than "mutative."
@@ -875,24 +875,6 @@ boolean solvable(int[] board) {
           
 
     
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
             </body>
     
 </html>
