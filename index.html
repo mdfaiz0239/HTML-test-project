@@ -845,7 +845,7 @@ boolean solvable(int[] board) {
 }
     </strong>
 </pre>
-<p>Along with canMove and makeMove, we are using methods puzzleSolved and printBoard with meanings that should be obvious.</p>
+<p>Along with <b>canMove</b> and <b>makeMove</b>, we are using methods <b>puzzleSolved</b> and <b>printBoard</b> with meanings that should be obvious.</p>
 
 <p>Here is some output from the program:</p>
 <pre>
@@ -868,6 +868,10 @@ boolean solvable(int[] board) {
 <i>1.</i>   BLACK  BLACK  BLACK  _____  WHITE  WHITE  WHITE
     </strong>
 </pre>
+<p>Notice that the solution is given in reverse order: <b>>BLACK </b>starts out on the left and <b>WHITE</b> on the right, as in the last line.
+     I've added line numbers to the actual output in order to emphasize this point. <b>Backtracking</b> always produces its results
+      (sequence of choices) in reverse order; it is up to you, the programmer,
+     to reverse the results again to get them in the correct order.</p>
           
 
     
