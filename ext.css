@@ -1,0 +1,57 @@
+label{
+    color:  rgb(9, 255, 0) ;
+}
+#password2{
+    color: rgb(24, 9, 226) ;
+    
+}
+/* #sure{
+    color: #e6e60d ;
+} */
+.redcolor{
+    color: red !important;
+    /* background-color: green;*/
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+    text-decoration-style: dotted;
+    /* margin: 40px 10px 20px 50px; */
+    /* margin-top: 10px; */
+    /* border:30px solid red;
+    border-radius: 20px; */
+    
+} 
+.name{
+    border: black solid;
+    height: 300px;
+    /* background-color: blue; */
+    /* background-image: linear-gradient(
+180deg
+, red, yellow); */
+background-image: url("https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/treesearch.gif")
+}
+.fontType{
+    font-size: 20px;
+}
+.ptag{
+  border: 10px solid,red;
+  /* padding-left: 10px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  padding-right 25px; ; */
+  border:30px solid red;
+    border-radius: 20px;
+  padding: 10px;
+
+
+}
+.image1{
+    border: 10px solid black;
+    background-image: url("treesearch.gif");
+    background-size: cover;
+     height: 300px;
+    width: 50%; 
+}
