@@ -6,7 +6,24 @@ body{
     font-size: 1.1em;
     text-align: center;
     line-height: 1.5;
+    /* display: flex; */
 }
+
+h2{
+    margin: 0;
+    padding: 1em;
+}
+p{
+    margin: 0;
+    padding: 1em;
+}
+img{
+
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .bg{
 
     position: absolute;
@@ -19,8 +36,12 @@ body{
     background-size: cover;
     opacity: 0.5;
 }
+
 #headerID{
      text-align: center; 
+     min-height: 450px;
+     color: #fff;
+
 }
 #headerID h1{
 
@@ -40,4 +61,28 @@ body{
     color: #333;
     background: #fff;
     cursor: -moz-zoom-in;
+}
+#section-a{
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+    display: block;
+}
+#section-b{
+    display: grid;
+    padding: 2em;
+}
+#section-b ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+#section-b li{
+            background: #fff;
+            color: #333;
+            width: 31%;
+            margin-bottom: 1em;
+            
 }
